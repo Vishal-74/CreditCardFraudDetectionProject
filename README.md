@@ -1,37 +1,28 @@
 # Credit Card Fraud Detection
 
-## Problem Statement
+## Overview
 
-This project's chosen problem statement is the prediction of fraudulent credit card transactions through the use of machine learning models.
+This repository focuses on predicting fraudulent credit card transactions using machine learning models. The dataset, available on [Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud), comprises 284,807 transactions, including 492 fraudulent ones. Preprocessing is necessary due to data imbalance.
 
-In this project, we will analyze customer-level data collected and examined during a research collaboration between Worldline and the Machine Learning Group.
+![1_Lci4cCUXgb6zZRyKmgWfVA](https://github.com/Vishal-74/CreditCardFraudDetectionProject/assets/115347234/fa9c32df-4f44-4dbd-9caf-73f84f506d97)
 
-The dataset is sourced from the [Kaggle Website](https://www.kaggle.com/mlg-ulb/creditcardfraud) and comprises a total of 284,807 transactions, including 492 fraudulent ones. Due to a high level of imbalance in the dataset, it requires preprocessing before model development.
 
-## Business Problem Overview
+## Business Problem
 
-For many banks, the primary business goal is to retain high-profit customers. However, banking fraud poses a significant threat to this goal. It is a concerning issue for both banks and customers, leading to substantial financial losses, trust issues, and credibility concerns.
+Banking fraud, causing significant financial losses and trust issues, was estimated at $30 billion globally by 2020 ([Nilson Report](https://nilsonreport.com/upload/content_promo/The_Nilson_Report_Issue_1164.pdf)). Rising digital transactions have led to evolving fraud methods.
 
-According to the [Nilson report](https://nilsonreport.com/upload/content_promo/The_Nilson_Report_Issue_1164.pdf), banking frauds were estimated to account for $30 billion worldwide by 2020. With the increasing use of digital payment channels, fraudulent transactions are also on the rise, employing new and diverse techniques.
+## Fraud Understanding
 
-In the banking sector, the use of machine learning for credit card fraud detection is not just a trend but a necessity. It enables proactive monitoring and fraud prevention mechanisms, reduces manual reviews, costly chargebacks, and denials of legitimate transactions.
+Fraudulent activities involve unauthorized financial gains, commonly through card skimming, counterfeit cards, or stolen cards. Machine learning aids in proactive fraud monitoring, reducing manual reviews and ensuring transaction legitimacy.
 
-## Understanding and Defining Fraud
+## Data Details
 
-Credit card fraud involves any dishonest act to obtain unauthorized financial gain without the account holder's permission. The most common form of fraud is skimming, where information from the magnetic strip of a card is duplicated. Other methods include manipulation of genuine cards, counterfeit card creation, using stolen/lost credit cards, and fraudulent telemarketing.
-
-## Data Dictionary
-
-You can download the dataset using this [link](https://www.kaggle.com/mlg-ulb/creditcardfraud).
-
-The dataset comprises credit card transactions made by European cardholders over two days in September 2013. Out of 284,807 transactions, 492 are fraudulent. The dataset is highly unbalanced, with fraudulent transactions accounting for 0.172% of the total. Principal Component Analysis (PCA) has been applied to maintain confidentiality. All features except 'time' and 'amount' are principal components derived from PCA. 'Time' represents the seconds elapsed between the first transaction and subsequent ones, while 'amount' denotes the transaction amount. The 'class' feature indicates class labels, with 1 indicating fraud and 0 for non-fraudulent transactions.
+The dataset includes transactions by European cardholders in September 2013. It's imbalanced, with 0.172% fraud cases. Principal Component Analysis (PCA) ensures confidentiality. 'Time' denotes transaction seconds, 'amount' signifies transaction value, and 'class' labels fraud (1) and non-fraud (0).
 
 ## Project Pipeline
 
-The project pipeline can be summarized in four main steps:
-
-- **Data Understanding:** Load and understand the dataset's features to select those needed for the final model.
-- **Exploratory Data Analysis (EDA):** Perform univariate and bivariate analyses, and consider feature transformations if required. Check for skewness in the data that might affect model-building.
-- **Train/Test Split:** Split the data for model evaluation using k-fold cross-validation to ensure proper representation of the minority class in test folds.
-- **Model Building/Hyperparameter Tuning:** Experiment with different models and fine-tune their hyperparameters to achieve the desired performance. Explore various sampling techniques for better results.
-- **Model Evaluation:** Evaluate models using appropriate metrics, emphasizing accurate identification of fraudulent transactions due to the data's imbalance. Choose metrics that align with this business goal.
+1. **Data Understanding:** Explore and select features for the final model.
+2. **Exploratory Data Analysis (EDA):** Analyze, transform, and address data skewness.
+3. **Train/Test Split:** Split data using k-fold cross-validation.
+4. **Model Building/Tuning:** Experiment, fine-tune models, and explore sampling techniques.
+5. **Model Evaluation:** Emphasize accurate fraud identification due to data imbalance, using appropriate evaluation metrics.
