@@ -1,5 +1,3 @@
-#streamlit run "C:/Users/Ashish/Desktop/python/Machine Learning Model/CreditCard/ccfd_streamlit.py"
-
 import numpy as np
 import pickle
 import streamlit as st
@@ -18,7 +16,7 @@ def credit_card_fraud_detection(input_data):
 
 def main():
     # Giving a title
-    st.title('Credit Card Fraud Detection Web App')
+    st.title('Credit Card Fraud Detection App')
     
     # Getting the input data from the user
     features = {}  # Dictionary to store input features
@@ -35,9 +33,17 @@ def main():
         ('V28', 'float')
     ]
     
-    for feature_name, feature_type in input_features:
-        input_value = st.text_input(f'{feature_name} ({feature_type})')
-        features[feature_name] = input_value
+    # Splitting input features into five columns
+    input_features_split = np.array_split(input_features, 5)
+    
+    # Create five columns for input features
+    col1, col2, col3, col4, col5 = st.columns(5)
+    
+    for col, feature_group in zip([col1, col2, col3, col4, col5], input_features_split):
+        with col:
+            for feature_name, feature_type in feature_group:
+                input_value = st.text_input(f'{feature_name} ({feature_type})')
+                features[feature_name] = input_value
     
     # Code for Prediction
     transaction = ''
