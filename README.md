@@ -6,6 +6,8 @@ This repository focuses on predicting fraudulent credit card transactions using 
 
 ![1_Lci4cCUXgb6zZRyKmgWfVA](https://github.com/Vishal-74/CreditCardFraudDetectionProject/assets/115347234/fa9c32df-4f44-4dbd-9caf-73f84f506d97)
 
+![image](https://github.com/Vishal-74/CreditCardFraudDetectionProject/assets/115347234/4a9d155e-31c0-4129-af12-72830a41291e)
+
 
 ## Business Problem
 
