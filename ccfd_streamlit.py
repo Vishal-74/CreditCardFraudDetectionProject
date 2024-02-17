@@ -5,7 +5,7 @@ import pickle
 import streamlit as st
 
 # Loading the saved model
-loaded_model = pickle.load(open('C:/Users/Ashish/Desktop/python/Machine Learning Model/CreditCard/ccfdtrained_model.sav', 'rb'))
+loaded_model = pickle.load(open('ccfdtrained_model.sav', 'rb'))
 
 # Creating a function for prediction
 def credit_card_fraud_detection(input_data):
